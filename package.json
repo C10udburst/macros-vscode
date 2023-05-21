@@ -12,7 +12,7 @@
   "activationEvents": [
   ],
   "main": "./dist/extension.js",
-  "icon": "./resources/icon.png",
+  "icon": "https://raw.githubusercontent.com/C10udburst/macros-vscode/master/resources/icon.png",
   "repository": {
     "url": "https://github.com/C10udburst/macros-vscode.git",
     "type": "git"
