@@ -19,14 +19,10 @@ You can install it from [Visual Studio Marketplace](https://marketplace.visualst
 - Record file modifications
 - Replay recorded modifications
 
-## Usage
-- Open command palette
-- Run `Macros: Record/stop recording`
+- Press <kbd>alt</kbd> + <kbd>f9</kbd> to start
 - Perform the desired modifications
-- Open command palette
-- Run `Macros: Record/stop recording` again
-- Open command palette
-- Select `Macros: Replay` to replay the recorded modifications
+- Press <kbd>alt</kbd> + <kbd>f9</kbd> again to finish
+- Press <kbd>alt</kbd> + <kbd>f10</kbd> to replay the recorded modifications
 
 ## Roadmap
 - [ ] Recording of command actions
