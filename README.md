@@ -1,4 +1,5 @@
 # Macros VSCode Extension
+
 Implements Notepad++ like macros.
 
 The extension lets you record file modifications and replay them later. It can be used to automate repetitive tasks.
@@ -12,7 +13,7 @@ The extension lets you record file modifications and replay them later. It can b
 </div>
 
 ## Installation
-For now you can download [the VSIX](https://nightly.link/C10udburst/macros-vscode/workflows/artifact/master/artifact.zip), but I'll post it to the marketplace at some point.
+You can install it from [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=C10udburst.macro-recorder)
 
 ## Features
 - Record file modifications
@@ -31,4 +32,4 @@ For now you can download [the VSIX](https://nightly.link/C10udburst/macros-vscod
 - [ ] Recording of command actions
 - [ ] Saving/Loading macros from files
 - [ ] Cliboard support
-- [ ] Editor buttons
+- [x] Editor buttons
