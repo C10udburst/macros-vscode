@@ -11,8 +11,17 @@
   ],
   "activationEvents": [
   ],
+  "publisher": "C10udburst",
   "main": "./dist/extension.js",
-  "icon": "https://raw.githubusercontent.com/C10udburst/macros-vscode/master/resources/icon.png",
+  "icon": "icon.png",
+  "repository": {
+    "url": "https://github.com/C10udburst/macros-vscode.git",
+    "type": "git"
+  },
+  "funding": [
+    "https://ko-fi.com/cl0udburst",
+    "https://github.com/sponsors/C10udburst/"
+  ]
   "contributes": {
     "commands": [
       {
