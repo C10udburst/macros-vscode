@@ -1,6 +1,6 @@
 {
-  "name": "macros",
-  "displayName": "macros",
+  "name": "macro-recorder",
+  "displayName": "Macro recorder",
   "description": "Notepad++ like macros",
   "version": "0.0.1",
   "engines": {
