@@ -10,18 +10,48 @@
     "Other"
   ],
   "activationEvents": [
-    "onStartupFinished"
   ],
   "main": "./dist/extension.js",
+  "icon": "./resources/icon.png",
+  "repository": {
+    "url": "https://github.com/C10udburst/macros-vscode"
+  },
   "contributes": {
     "commands": [
       {
         "command": "macros.record",
-        "title": "Macros: Record/stop recording"
+        "title": "Record/stop recording",
+        "category": "Macros"
       },
       {
         "command": "macros.replay",
-        "title": "Macros: Replay"
+        "title": "Replay",
+        "category": "Macros",
+        "icon": "$(keyboard)"
+      },
+      {
+        "command": "macros.displaySteps",
+        "title": "Display steps",
+        "category": "Macros"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "macros.replay",
+          "when": "macros:recorded_macro && editorTextFocus",
+          "group": "navigation"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "macros.record",
+        "key": "alt+f9"
+      },
+      {
+        "command": "macros.replay",
+        "key": "alt+f10"
       }
     ]
   },
