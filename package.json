@@ -14,7 +14,8 @@
   "main": "./dist/extension.js",
   "icon": "./resources/icon.png",
   "repository": {
-    "url": "https://github.com/C10udburst/macros-vscode"
+    "url": "https://github.com/C10udburst/macros-vscode.git",
+    "type": "git"
   },
   "contributes": {
     "commands": [
