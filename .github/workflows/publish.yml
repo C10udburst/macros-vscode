@@ -16,4 +16,4 @@ jobs:
         version: 18
     - run: npm install -g vsce
     - run: npm install
-    - run: vsce publish --pat ${{ secrets.VSCE_PAT }}
+    - run: vsce publish patch --pat ${{ secrets.VSCE_PAT }}
