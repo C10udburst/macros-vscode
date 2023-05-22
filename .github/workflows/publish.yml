@@ -20,3 +20,4 @@ jobs:
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Actions"
     - run: vsce publish patch --pat ${{ secrets.VSCE_PAT }}
+    - run: git push

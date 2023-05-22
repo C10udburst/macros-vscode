@@ -18,14 +18,10 @@ You can install it from [Visual Studio Marketplace](https://marketplace.visualst
 ## Features
 - Record file modifications
 - Replay recorded modifications
+- Record command palette with <kbd>alt</kbd>+<kbd>f1</kbd> (a bit scuffed due to vscode's API limits)
 
+## Usage
 - Press <kbd>alt</kbd> + <kbd>f9</kbd> to start
 - Perform the desired modifications
 - Press <kbd>alt</kbd> + <kbd>f9</kbd> again to finish
 - Press <kbd>alt</kbd> + <kbd>f10</kbd> to replay the recorded modifications
-
-## Roadmap
-- [ ] Recording of command actions
-- [ ] Saving/Loading macros from files
-- [ ] Cliboard support
-- [x] Editor buttons

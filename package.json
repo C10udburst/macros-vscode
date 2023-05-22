@@ -2,7 +2,7 @@
   "name": "macro-recorder",
   "displayName": "Macro recorder",
   "description": "Notepad++ like macros",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.78.0"
   },
@@ -42,6 +42,11 @@
         "command": "macros.displaySteps",
         "title": "Display steps",
         "category": "Macros"
+      },
+      {
+        "command": "macros.executeCommand",
+        "title": "Run command and record",
+        "category": "Macros"
       }
     ],
     "menus": {
@@ -60,7 +65,13 @@
       },
       {
         "command": "macros.replay",
+        "when": "macros:recorded_macro && editorTextFocus",
         "key": "alt+f10"
+      },
+      {
+        "command": "macros.executeCommand",
+        "when": "macros:recording_macro",
+        "key": "alt+f1"
       }
     ]
   },

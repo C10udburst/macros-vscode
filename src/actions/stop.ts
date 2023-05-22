@@ -27,6 +27,7 @@ export function stopMacro(context: MacroContext) {
         );
 
         vscode.commands.executeCommand("setContext", "macros:recorded_macro", true);
+        vscode.commands.executeCommand("setContext", "macros:recording_macro", false);
     }
     stopListeners(context);
     context.statusBar?.dispose();

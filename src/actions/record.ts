@@ -24,6 +24,7 @@ export function record(context: MacroContext) {
     registerListeners(context);
 
     vscode.window.showInformationMessage(`Started recording a macro.`);
+    vscode.commands.executeCommand("setContext", "macros:recording_macro", true);
 }
 
 function renderStatusBar(context: MacroContext) {

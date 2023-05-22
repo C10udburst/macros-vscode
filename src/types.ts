@@ -2,7 +2,8 @@ import { Disposable, OutputChannel, Position, StatusBarItem, TextEditor, TextEdi
 
 export enum StepType {
     edit = 1,
-    insert = 2
+    insert = 2,
+    command = 3
 }
 
 export type PosDelta = number[];
@@ -21,7 +22,7 @@ export type Macro = {
 export type Step = {
     text: string;
     type: StepType;
-    location: {
+    location?: {
         start: PosDelta;
         end: PosDelta;
     };
