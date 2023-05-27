@@ -2,15 +2,14 @@
   "name": "macro-recorder",
   "displayName": "Macro recorder",
   "description": "Notepad++ like macros",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.74.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-  ],
+  "activationEvents": [],
   "publisher": "C10udburst",
   "main": "./dist/extension.js",
   "icon": "icon.png",
