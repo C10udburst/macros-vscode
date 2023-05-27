@@ -7,9 +7,10 @@ export async function play(context: MacroContext) {
     if (context.textEditorEdit === undefined || context.textEditor === undefined) {
         return;
     }
-    const offset = context.textEditor.selection.active;
+    let offset = context.textEditor.selection.active;
     if (offset === undefined) { return; }
     for (const step of context.macro?.steps || []) {
+        offset = context.textEditor.selection.active || offset; // update offset
         if (step.type === StepType.edit && step.location !== undefined) {
             context.textEditorEdit.replace(
                 new Range(

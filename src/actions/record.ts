@@ -21,7 +21,7 @@ export function record(context: MacroContext) {
     context.statusBar.show();
     renderStatusBar(context);
 
-    registerListeners(context);
+    registerListeners(context, context.textEditor);
 
     vscode.window.showInformationMessage(`Started recording a macro.`);
     vscode.commands.executeCommand("setContext", "macros:recording_macro", true);
@@ -32,7 +32,7 @@ function renderStatusBar(context: MacroContext) {
     context.statusBar.text = `$(keybindings-record-keys) Recording a macro (${context.macro?.steps.length ?? 0} step${context.macro?.steps.length !== 1 ? 's' : ''}.)`;
 }
 
-function registerListeners(context: MacroContext) {
+function registerListeners(context: MacroContext, textEditor: vscode.TextEditor) {
     context.listeners.push(vscode.workspace.onDidChangeTextDocument((e) => {
         for (const step of e.contentChanges) {
             context.macro?.steps.push(fixStep(
@@ -52,6 +52,7 @@ function registerListeners(context: MacroContext) {
                 }
             ));
         }
+        if (context.macro && textEditor) { context.macro.cursor.origin = textEditor.selection.active;}
         renderStatusBar(context);
     }));
 
